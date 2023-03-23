@@ -1,4 +1,18 @@
+header {
+  background: rgb(209, 243, 255);
+}
 h1 {
   text-align: center;
   color: brown;
+}
+
+#jose {
+  text-transform: uppercase;
+}
+#carlos {
+  color: red;
+}
+
+#xoan {
+  color: blue;
 }
