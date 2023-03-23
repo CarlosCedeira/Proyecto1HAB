@@ -1,6 +1,11 @@
 header {
   background: rgb(209, 243, 255);
+}
 h1 {
   text-align: center;
   color: brown;
+}
+
+#carlos {
+  color: red;
 }
