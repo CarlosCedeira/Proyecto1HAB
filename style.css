@@ -1,11 +1,16 @@
-<<<<<<< HEAD
 header {
   background: rgb(209, 243, 255);
-=======
+}
 h1 {
   text-align: center;
   color: brown;
->>>>>>> 5734a1c4f286265cb68388560ac3419d2a1a822b
+}
+
+#jose {
+  text-transform: uppercase;
+}
+#carlos {
+  color: red;
 }
 
 p #mery {
