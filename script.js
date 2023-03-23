@@ -1,2 +1,3 @@
 "use strict";
-console.log(ey);
+
+console.log("ey");
