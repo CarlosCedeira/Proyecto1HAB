@@ -1,8 +1,6 @@
-header {
-  background: rgb(209, 243, 255);
-}
-h1 {
+body {
   text-align: center;
+<<<<<<< HEAD
   color: brown;
 }
 
@@ -21,4 +19,6 @@ p #mery {
 
 #mery {
   color: cornflowerblue;
+=======
+>>>>>>> fbf84bba4269a02c8b3378cdcd9e20750f51e1c5
 }
