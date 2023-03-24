@@ -6,11 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
   </head>
   <body>
     <header>
       <h1>Lista de la compra</h1>
     </header>
+    <h1>Lista de tareas</h1>
+    <form>
+      <label>
+        Tarea:
+        <input type="text" id="task" maxlength="50" required />
+      </label>
+      <label>
+        Prioridad:
+        <select id="priority">
+          <option value="normal">Normal</option>
+          <option value="importante">Importante</option>
+        </select>
+      </label>
+      <button type="submit">Agregar tarea</button>
+    </form>
+    <ul id="task-list"></ul>
+    <button id="clear">Borrar tareas completadas</button>
+
+    <script src="script.js"></script>
   </body>
 </html>
