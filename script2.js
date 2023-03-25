@@ -11,9 +11,9 @@ function init() {
 }
 
 function anadir(e) {
+  evento.preventDefault();
   evento = e || window.event;
   if (nuevoItem.value == "") {
-    evento.preventDefault();
   } else {
     var lista = document.createElement("li");
     lista.innerHTML = nuevoItem.value;
