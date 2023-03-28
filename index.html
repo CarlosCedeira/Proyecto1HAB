@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="description" content="Lista de la compra" />
+    <title>Lista de la compra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"></link>
   </head>
   <body>
-    <header>
-      <h1>Lista de la compra</h1>
-    </header>
-    <h1>Lista de tareas</h1>
-    <form>
-      <label>
-        Tarea:
-        <input type="text" id="task" maxlength="50" required />
-      </label>
-      <label>
-        Prioridad:
-        <select id="priority">
-          <option value="normal">Normal</option>
-          <option value="importante">Importante</option>
-        </select>
-      </label>
-      <button type="submit">Agregar tarea</button>
-    </form>
-    <ul id="task-list"></ul>
-    <button id="clear">Borrar tareas completadas</button>
-
+<h1>Lista de tareas</h1>
+  <form>
+    <label for="tarea">Tarea:</label>
+    <input type="text" id="tarea" name="tarea" maxlength="50">   <button>Añadir tarea</button>
+    <br>
+    <label for="prioridad">Prioridad:</label>
+    <select id="prioridad" name="prioridad">
+      <option value="normal">Normal</option>
+      <option value="importante">Importante</option>
+    </select>
+    <br>
+  </form>
+   <h2>Lista de tareas</h2>
+   <article>
+  <ul id="listaTareas">
+    <!-- Aquí se agregarán las tareas con JavaScript -->
+  </ul>
+  </article>
+   <button type="button" id="limpiarTareasHechas">Limpiar Tareas Completadas</button>
+   <button type="button" id="limpiarTareas">Limpiar todas las tareas</button>
     <script src="script.js"></script>
   </body>
 </html>
