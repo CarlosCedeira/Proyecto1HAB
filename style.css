@@ -1,76 +1,68 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+:root {
+  --color-fondo: rgb(41, 163, 151);
+  --color-claro: rgb(64, 244, 208);
+  --color-oscuro: rgb(6, 61, 56);
 }
 
+html {
+  background-color: var(--color-fondo);
+}
 body {
-  background: #fafafa;
-  font-family: arial, helvetica, sans-serif;
-  font-size: 16px;
-}
-
-.wrap {
-  margin: auto;
-  max-width: 800px;
-  width: 90%;
-}
-
-.principal {
-  background: #36bef4;
-  border-top: 20px solid #cec5c5;
-  color: #fff;
-  padding: 50px 0;
-  width: 100%;
-}
-
-.principal .formulario {
-  color: #212121;
   text-align: center;
 }
-
-.principal .formulario input[type="text"] {
-  margin-bottom: 20px;
-  padding: 10px;
-  width: 100%;
+h1 {
+  font-size: 4rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#listaTareas {
+  border: 5px solid var(--color-oscuro);
+  list-style-type: none;
+  background-color: rgba(64, 244, 208, 0.3);
 }
 
-.principal .formulario input[type="text"].error {
-  border: 5px solid #0e0c0c;
-  color: rgb(3, 1, 1);
+label {
+  font-weight: bold;
 }
 
-.principal .formulario .boton {
-  background: none;
-  border: 1px solid #000000;
-  color: #fff;
-  display: inline-block;
-  font-size: 16px;
-  padding: 15px;
+input {
+  display: inline;
+  margin: 20px auto;
+  padding: 0.3rem;
+  background-color: var(--color-claro);
+  border-color: var(--color-oscuro);
+  padding-left: 0.5rem;
 }
 
-.principal .formulario .boton:hover {
-  border: 1px solid #fff;
+input:focus,
+input:hover {
+  background-color: var(--color-oscuro);
+  color: var(--color-claro);
 }
 
-/* - Tareas - */
-.tareas .lista {
-  list-style: none;
+form {
+  font-size: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.tareas .lista li {
-  border-bottom: 1px solid #b6b6b6;
+select {
+  padding: 0.3rem;
+  background-color: var(--color-claro);
+  border-color: var(--color-oscuro);
+  border-radius: 25px;
 }
 
-.tareas .lista li a {
-  color: #212121;
-  display: block;
-  padding: 20px 0;
-  text-decoration: none;
+select:hover {
+  background-color: var(--color-oscuro);
+  color: aquamarine;
 }
 
-.tareas .lista li a:hover {
-  text-decoration: line-through;
+button {
+  padding: 0.3rem;
+  background-color: var(--color-claro);
+  border-radius: 25px;
+}
+
+button:hover {
+  background-color: var(--color-oscuro);
+  color: var(--color-claro);
 }
