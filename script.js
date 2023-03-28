@@ -1,5 +1,12 @@
-// Obtener elementos del DOM
+// Cargar tareas guardadas en el almacenamiento local
 
+window.addEventListener("load", () => {
+  const tareasGuardadas = localStorage.getItem("listaTareas");
+  if (tareasGuardadas) {
+    listaTareas.innerHTML = tareasGuardadas;
+  }
+});
+// Obtener elementos del DOM
 const form = document.querySelector("form");
 const tareaInput = document.getElementById("tarea");
 const prioridadInput = document.getElementById("prioridad");
@@ -63,21 +70,23 @@ limpiarTareasBtn.addEventListener("click", () => {
 });
 
 // Limpiar todas las tareas
-// falta que guarde los cambias en local storage y cambiar la eliminacion del ul por el
+
+limpiarTodasTareas.addEventListener("click", () => {
+  // Eliminar todas las tareas del ul
+
+  const elementosLi = listaTareas.getElementsByTagName("li");
+  console.log(elementosLi);
+  while (elementosLi.length >= 0) {
+    listaTareas.removeChild(elementosLi[0]);
+  }
+});
+
+// y cambiar la eliminacion del ul por el
 // li, actualmente borra la etiqueta ul impidiendo añadir futuras tareas bucle foreach
 // a cada elemento li listaTareas.querySelectorAll("li")
 console.log(listaTareas);
 limpiarTodasTareas.addEventListener("click", () => {
   listaTareas.remove();
-});
-
-// Cargar tareas guardadas en el almacenamiento local
-
-window.addEventListener("load", () => {
-  const tareasGuardadas = localStorage.getItem("listaTareas");
-  if (tareasGuardadas) {
-    listaTareas.innerHTML = tareasGuardadas;
-  }
 });
 
 // Guardar tareas en el almacenamiento local
