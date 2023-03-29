@@ -36,6 +36,10 @@ fieldset {
   box-shadow: 10px 10px 10px var(--color-claro);
 }
 
+ul {
+  list-style-type: none;
+}
+
 label {
   font-weight: bold;
 }
