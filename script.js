@@ -5,6 +5,9 @@ window.addEventListener("load", () => {
   if (tareasGuardadas) {
     listaTareas.innerHTML = tareasGuardadas;
 
+    // bucle que recorre los elemento de la la listaTareas comprobando si tienen line-through en caso afirmativo
+    // activa el check
+
     let contador = 3;
     while (contador < listaTareas.childNodes.length) {
       if (
@@ -14,19 +17,6 @@ window.addEventListener("load", () => {
       }
       contador++;
     }
-
-    // if (listaTareas.firstElementChild.style.textDecoration === "line-through") {
-    //   const liAnidados = listaTareas.childNodes;
-    //   let contador = 3;
-    //   while (contador < liAnidados.length) {
-    //     console.log(
-    //       (listaTareas.childNodes[contador].firstElementChild.checked = true)
-    //     );
-    //     contador++;
-    //   }
-    //   console.log(liAnidados.length);
-    //   //listaTareas.childNodes[3].firstElementChild.checked = true;
-    // }
   }
 });
 // Obtener elementos del DOM
