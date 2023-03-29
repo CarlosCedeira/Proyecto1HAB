@@ -19,7 +19,7 @@ h1 {
   border: 5px solid var(--color-oscuro);
   list-style-type: none;
   background-color: var(--color-claro);
-  box-shadow: 10px 10px 10px;
+  box-shadow: 10px 10px 10px var(--color-claro);
   position: relative;
   width: 50%;
   left: 25%;
@@ -31,7 +31,7 @@ fieldset {
   left: 25%;
   border-color: var(--color-oscuro);
   border-radius: 12.5px;
-  box-shadow: 10px 10px 10px;
+  box-shadow: 10px 10px 10px var(--color-claro);
 }
 
 label {
