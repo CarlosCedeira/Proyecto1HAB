@@ -9,6 +9,7 @@ html {
 }
 body {
   text-align: center;
+  font-size: large;
 }
 h1 {
   font-size: 4rem;
@@ -23,6 +24,7 @@ h1 {
   position: relative;
   width: 50%;
   left: 25%;
+  color: var(--color-oscuro);
 }
 
 fieldset {
