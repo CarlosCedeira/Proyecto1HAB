@@ -13,11 +13,25 @@ body {
 h1 {
   font-size: 4rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-shadow: 5px 5px 10px var(--color-claro);
 }
 #listaTareas {
   border: 5px solid var(--color-oscuro);
   list-style-type: none;
-  background-color: rgba(64, 244, 208, 0.3);
+  background-color: var(--color-claro);
+  box-shadow: 10px 10px 10px;
+  position: relative;
+  width: 50%;
+  left: 25%;
+}
+
+fieldset {
+  width: 50%;
+  position: relative;
+  left: 25%;
+  border-color: var(--color-oscuro);
+  border-radius: 12.5px;
+  box-shadow: 10px 10px 10px;
 }
 
 label {

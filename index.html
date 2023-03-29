@@ -12,18 +12,19 @@
   <body>
 <h1>Lista de tareas</h1>
   <form>
+    <fieldset>
     <label for="tarea">Tarea:</label>
-    <input type="text" id="tarea" name="tarea" maxlength="50" autocomplete="off">   <button>Añadir tarea</button>
+    <input type="text" id="tarea" name="tarea" maxlength="50" autocomplete="off">   <button>➕</button>
     <br>
     <label for="prioridad">Prioridad:</label>
     <select id="prioridad" name="prioridad">
       <option value="normal">Normal</option>
       <option value="importante">Importante</option>
     </select>
-    <br>
+  </fieldset>
   </form>
-   <h2>Lista de tareas</h2>
-   <article>
+  <article>
+     <h2>Lista de tareas</h2>
   <ul id="listaTareas">
     <!-- Aquí se agregarán las tareas con JavaScript -->
   </ul>
