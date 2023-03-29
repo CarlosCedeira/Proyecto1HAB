@@ -4,6 +4,29 @@ window.addEventListener("load", () => {
   const tareasGuardadas = localStorage.getItem("listaTareas");
   if (tareasGuardadas) {
     listaTareas.innerHTML = tareasGuardadas;
+
+    let contador = 3;
+    while (contador < listaTareas.childNodes.length) {
+      if (
+        listaTareas.childNodes[contador].style.textDecoration === "line-through"
+      ) {
+        listaTareas.childNodes[contador].firstElementChild.checked = true;
+      }
+      contador++;
+    }
+
+    // if (listaTareas.firstElementChild.style.textDecoration === "line-through") {
+    //   const liAnidados = listaTareas.childNodes;
+    //   let contador = 3;
+    //   while (contador < liAnidados.length) {
+    //     console.log(
+    //       (listaTareas.childNodes[contador].firstElementChild.checked = true)
+    //     );
+    //     contador++;
+    //   }
+    //   console.log(liAnidados.length);
+    //   //listaTareas.childNodes[3].firstElementChild.checked = true;
+    // }
   }
 });
 // Obtener elementos del DOM
@@ -54,6 +77,7 @@ form.addEventListener("submit", (evento) => {
 
 listaTareas.addEventListener("change", (evento) => {
   const tareaCheckbox = evento.target.parentElement;
+  console.log(tareaCheckbox);
   if (tareaCheckbox.firstElementChild.checked) {
     tareaCheckbox.style.textDecoration = "line-through";
   } else {
