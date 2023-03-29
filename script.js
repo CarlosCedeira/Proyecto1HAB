@@ -69,24 +69,13 @@ limpiarTareasBtn.addEventListener("click", () => {
   });
 });
 
-// Limpiar todas las tareas
+//Limpiar todas las tareas
 
 limpiarTodasTareas.addEventListener("click", () => {
-  // Eliminar todas las tareas del ul
-
   const elementosLi = listaTareas.getElementsByTagName("li");
-  console.log(elementosLi);
   while (elementosLi.length >= 0) {
     listaTareas.removeChild(elementosLi[0]);
   }
-});
-
-// y cambiar la eliminacion del ul por el
-// li, actualmente borra la etiqueta ul impidiendo añadir futuras tareas bucle foreach
-// a cada elemento li listaTareas.querySelectorAll("li")
-console.log(listaTareas);
-limpiarTodasTareas.addEventListener("click", () => {
-  listaTareas.remove();
 });
 
 // Guardar tareas en el almacenamiento local
