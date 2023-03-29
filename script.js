@@ -47,15 +47,25 @@ form.addEventListener("submit", (evento) => {
   }
 
   // Crear elemento de la tarea y agregarlo a la lista
-
-  const nuevaTarea = document.createElement("li");
-  nuevaTarea.innerHTML = `
+  if (prioridadInput.value === "importante") {
+    const nuevaTareaImportante = document.createElement("li");
+    nuevaTareaImportante.innerHTML = `
         <input type="checkbox">
-        Prioridad:
-        ${prioridad} / Fecha: ${fecha}
         ${tareaTexto}
+        / Fecha: ${fecha}
         `;
-  listaTareas.appendChild(nuevaTarea);
+    nuevaTareaImportante.style.fontWeight = "bold";
+    nuevaTareaImportante.style.fontStyle = "italic";
+    listaTareas.appendChild(nuevaTareaImportante);
+  } else {
+    const nuevaTarea = document.createElement("li");
+    nuevaTarea.innerHTML = `
+        <input type="checkbox">
+        ${tareaTexto}
+        / Fecha: ${fecha}
+        `;
+    listaTareas.appendChild(nuevaTarea);
+  }
 
   // Limpiar formulario despues de cada dato introducido
 
@@ -67,7 +77,6 @@ form.addEventListener("submit", (evento) => {
 
 listaTareas.addEventListener("change", (evento) => {
   const tareaCheckbox = evento.target.parentElement;
-  console.log(tareaCheckbox);
   if (tareaCheckbox.firstElementChild.checked) {
     tareaCheckbox.style.textDecoration = "line-through";
   } else {
