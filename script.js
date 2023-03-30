@@ -103,18 +103,6 @@ limpiarTodasTareas.addEventListener("click", (e) => {
   }
 });
 
-// Limpiar cada elemento con el emoticono de basura
-
-// listaTareas.addEventListener("click", (e) => {
-//   const basura = document.querySelectorAll(".basura");
-//   console.log(e.target);
-//   if (e.target === basura[0]) {
-//     console.log("hola");
-//     e.target.remove();
-//   }
-//   //e.target.remove();
-// });
-
 // Guardar tareas en el almacenamiento local
 
 window.addEventListener("unload", () => {
