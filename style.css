@@ -39,11 +39,14 @@ h2 {
 
 #basura {
   font-size: 1rem;
-  color: red;
 }
 
-#basura:hover {
-  font-size: 1.5rem;
+input[type="checkbox"] {
+  border-radius: 150px;
+}
+
+button {
+  cursor: pointer;
 }
 
 fieldset {
