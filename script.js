@@ -53,7 +53,6 @@ form.addEventListener("submit", (evento) => {
         <input type="checkbox">
         ${tareaTexto}
         / Fecha: ${fecha}
-        <button class="basura">&#x1F5D1;&#xFE0F</button>
         <hr>
         `;
     nuevaTareaImportante.style.fontWeight = "bold";
@@ -65,7 +64,6 @@ form.addEventListener("submit", (evento) => {
         <input type="checkbox">
         ${tareaTexto}
         / Fecha: ${fecha}
-        <button class="basura">&#x1F5D1;&#xFE0F</button>
         <hr>
         `;
     listaTareas.appendChild(nuevaTarea);
@@ -106,11 +104,6 @@ limpiarTodasTareas.addEventListener("click", (e) => {
 });
 
 // Limpiar cada elemento con el emoticono de basura
-
-listaTareas.addEventListener("click", (e) => {
-  const basura = e.target;
-  basura.parentElement.remove();
-});
 
 // listaTareas.addEventListener("click", (e) => {
 //   const basura = document.querySelectorAll(".basura");
