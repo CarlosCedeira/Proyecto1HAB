@@ -53,6 +53,7 @@ form.addEventListener("submit", (evento) => {
         <input type="checkbox">
         ${tareaTexto}
         / Fecha: ${fecha}
+        <hr>
         `;
     nuevaTareaImportante.style.fontWeight = "bold";
     nuevaTareaImportante.style.fontStyle = "italic";
@@ -63,6 +64,7 @@ form.addEventListener("submit", (evento) => {
         <input type="checkbox">
         ${tareaTexto}
         / Fecha: ${fecha}
+        <hr>
         `;
     listaTareas.appendChild(nuevaTarea);
   }
