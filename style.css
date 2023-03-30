@@ -37,10 +37,6 @@ h2 {
   color: var(--color-oscuro);
 }
 
-#basura {
-  font-size: 1rem;
-}
-
 input[type="checkbox"] {
   border-radius: 150px;
 }
