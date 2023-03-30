@@ -96,13 +96,19 @@ limpiarTareasBtn.addEventListener("click", () => {
   });
 });
 
-//Limpiar todas las tareas
+// Limpiar todas las tareas
 
 limpiarTodasTareas.addEventListener("click", () => {
   const elementosLi = listaTareas.getElementsByTagName("li");
   while (elementosLi.length >= 0) {
     listaTareas.removeChild(elementosLi[0]);
   }
+});
+
+// Limpiar cada elemento con el emoticono de basura
+
+listaTareas.addEventListener("click", (e) => {
+  e.target.parentElement.remove();
 });
 
 // Guardar tareas en el almacenamiento local
