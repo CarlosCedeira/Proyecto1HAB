@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --color-fondo: rgb(41, 163, 151);
   --color-claro: rgb(64, 244, 208);
@@ -9,15 +13,61 @@ html {
 }
 body {
   text-align: center;
+  font-size: large;
 }
 h1 {
   font-size: 4rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-shadow: 5px 5px 10px var(--color-claro);
 }
+
+h2 {
+  position: relative;
+  left: 3%;
+}
+
 #listaTareas {
   border: 5px solid var(--color-oscuro);
   list-style-type: none;
-  background-color: rgba(64, 244, 208, 0.3);
+  background-color: var(--color-claro);
+  box-shadow: 10px 10px 10px var(--color-claro);
+  position: relative;
+  width: 50%;
+  left: 25%;
+  color: var(--color-oscuro);
+}
+
+input[type="checkbox"] {
+  border-radius: 150px;
+}
+
+button {
+  cursor: pointer;
+}
+
+fieldset {
+  margin-right: 10px;
+  width: 50%;
+  position: relative;
+  left: 25%;
+  border-color: var(--color-oscuro);
+  border-radius: 12.5px;
+  box-shadow: 10px 10px 10px var(--color-claro);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  position: relative;
+  right: 5%;
+}
+
+hr {
+  background-color: var(--color-oscuro);
+  width: 50%;
+  height: 2px;
 }
 
 label {

@@ -4,6 +4,19 @@ window.addEventListener("load", () => {
   const tareasGuardadas = localStorage.getItem("listaTareas");
   if (tareasGuardadas) {
     listaTareas.innerHTML = tareasGuardadas;
+
+    // bucle que recorre los elemento de la la listaTareas comprobando si tienen line-through en caso afirmativo
+    // activa el check
+
+    let contador = 3;
+    while (contador < listaTareas.childNodes.length) {
+      if (
+        listaTareas.childNodes[contador].style.textDecoration === "line-through"
+      ) {
+        listaTareas.childNodes[contador].firstElementChild.checked = true;
+      }
+      contador++;
+    }
   }
 });
 // Obtener elementos del DOM
@@ -28,21 +41,33 @@ form.addEventListener("submit", (evento) => {
   const tareaHecha = false;
   const fecha = new Date().toLocaleDateString();
 
-  if (tareaTexto === "") {
-    alert("introduce algún valor");
+  if (tareaTexto.trim() === "") {
+    alert("Introduce algún valor");
     return;
   }
 
   // Crear elemento de la tarea y agregarlo a la lista
-
-  const nuevaTarea = document.createElement("li");
-  nuevaTarea.innerHTML = `
+  if (prioridadInput.value === "importante") {
+    const nuevaTareaImportante = document.createElement("li");
+    nuevaTareaImportante.innerHTML = `
         <input type="checkbox">
-        Prioridad:
-        ${prioridad} / Fecha: ${fecha}
         ${tareaTexto}
+        / Fecha: ${fecha}
+        <hr>
         `;
-  listaTareas.appendChild(nuevaTarea);
+    nuevaTareaImportante.style.fontWeight = "bold";
+    nuevaTareaImportante.style.fontStyle = "italic";
+    listaTareas.appendChild(nuevaTareaImportante);
+  } else {
+    const nuevaTarea = document.createElement("li");
+    nuevaTarea.innerHTML = `
+        <input type="checkbox">
+        ${tareaTexto}
+        / Fecha: ${fecha}
+        <hr>
+        `;
+    listaTareas.appendChild(nuevaTarea);
+  }
 
   // Limpiar formulario despues de cada dato introducido
 
@@ -71,23 +96,24 @@ limpiarTareasBtn.addEventListener("click", () => {
 
 // Limpiar todas las tareas
 
-limpiarTodasTareas.addEventListener("click", () => {
-  // Eliminar todas las tareas del ul
-
+limpiarTodasTareas.addEventListener("click", (e) => {
   const elementosLi = listaTareas.getElementsByTagName("li");
-  console.log(elementosLi);
   while (elementosLi.length >= 0) {
     listaTareas.removeChild(elementosLi[0]);
   }
 });
 
-// y cambiar la eliminacion del ul por el
-// li, actualmente borra la etiqueta ul impidiendo añadir futuras tareas bucle foreach
-// a cada elemento li listaTareas.querySelectorAll("li")
-console.log(listaTareas);
-limpiarTodasTareas.addEventListener("click", () => {
-  listaTareas.remove();
-});
+// Limpiar cada elemento con el emoticono de basura
+
+// listaTareas.addEventListener("click", (e) => {
+//   const basura = document.querySelectorAll(".basura");
+//   console.log(e.target);
+//   if (e.target === basura[0]) {
+//     console.log("hola");
+//     e.target.remove();
+//   }
+//   //e.target.remove();
+// });
 
 // Guardar tareas en el almacenamiento local
 
