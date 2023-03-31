@@ -41,8 +41,8 @@ form.addEventListener("submit", (evento) => {
   const tareaHecha = false;
   const fecha = new Date().toLocaleDateString();
 
-  if (tareaTexto === "") {
-    alert("introduce algún valor");
+  if (tareaTexto.trim() === "") {
+    alert("Introduce algún valor");
     return;
   }
 
